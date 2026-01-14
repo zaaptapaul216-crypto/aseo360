@@ -1,0 +1,109 @@
+.partners-section {
+    background-color: #0F172A;
+    /* Dark Navy */
+    padding: 4rem 2rem;
+    color: white;
+}
+
+.partners-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+}
+
+.partners-text {
+    flex: 1;
+}
+
+.partners-text h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.partners-text p {
+    color: #94A3B8;
+    margin-bottom: 2rem;
+    max-width: 450px;
+}
+
+.partners-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.email-input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    color: white;
+    flex: 1;
+    max-width: 250px;
+}
+
+.btn-request {
+    background-color: #0277BD;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.benefits-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.benefit-card {
+    background: rgba(255, 255, 255, 0.05);
+    /* Glass effect */
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.benefit-icon {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.benefit-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.benefit-card p {
+    color: #94A3B8;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .partners-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .partners-text {
+        margin-bottom: 2rem;
+    }
+
+    .partners-actions {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .email-input {
+        width: 100%;
+        max-width: none;
+    }
+}

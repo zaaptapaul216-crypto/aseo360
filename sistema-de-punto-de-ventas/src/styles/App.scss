@@ -1,0 +1,79 @@
+@use "sass:color";
+// Google Fonts Import
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+// Variables - Premium Palette
+$primary-color: #0f172a; // Deep Navy
+$secondary-color: #3b82f6; // Vibrant Blue
+$accent-color: #10b981; // Success Green
+$background-color: #f1f5f9; // Light Grayish Blue
+$card-bg: #ffffff;
+$text-color: #1e293b;
+$text-muted: #64748b;
+
+$font-family: 'Inter', sans-serif;
+
+// Global Resets & Styles
+body {
+  font-family: $font-family;
+  background-color: $background-color;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.bg-gradient-premium {
+  background: linear-gradient(135deg, $background-color 0%, color.adjust($background-color, $lightness: -5%) 100%);
+  background-size: cover;
+}
+
+// Glassmorphism Utilities
+.glass-panel {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.card-premium {
+  @extend .glass-panel;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+}
+
+// Buttons
+.btn-primary-custom {
+  background-color: $secondary-color;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: color.adjust($secondary-color, $lightness: -10%);
+  }
+}
+
+// Fade Animation
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

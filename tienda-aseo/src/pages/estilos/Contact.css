@@ -1,0 +1,112 @@
+.contact-page {
+    padding: 3rem 1rem;
+    min-height: 80vh;
+    background-color: #fff;
+}
+
+.contact-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-container h1 {
+    color: #1A2B49;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.contact-subtitle {
+    text-align: center;
+    color: #546E7A;
+    margin-bottom: 3rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 3rem;
+}
+
+.contact-form-box {
+    background: #F8FAFC;
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.contact-form-box .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form-box label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #37474F;
+    font-weight: 500;
+}
+
+.contact-form-box input,
+.contact-form-box select,
+.contact-form-box textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #CFD8DC;
+    border-radius: 6px;
+    background: white;
+    font-size: 0.95rem;
+}
+
+.btn-send {
+    background-color: #0277BD;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-send:hover {
+    background-color: #01579B;
+}
+
+.contact-info-box h3 {
+    color: #1A2B49;
+    margin-bottom: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: flex-start;
+}
+
+.info-item .icon {
+    font-size: 1.2rem;
+}
+
+.info-item p {
+    color: #546E7A;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.map-placeholder {
+    background: #E0E0E0;
+    height: 200px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #757575;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}

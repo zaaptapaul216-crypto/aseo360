@@ -1,0 +1,242 @@
+.about-page {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.about-title {
+    color: #1A2B49;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.about-intro {
+    color: #546E7A;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.info-card {
+    background: #F8FAFC;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    z-index: 2;
+    position: relative;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.mission-title {
+    color: #0277BD;
+}
+
+.vision-title {
+    color: #2E7D32;
+}
+
+.info-card p {
+    color: #546E7A;
+    line-height: 1.6;
+}
+
+/* CAROUSEL SECTION */
+.carousel-section {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 4rem 2rem;
+    position: relative;
+    /* Context for background bubbles */
+    background: linear-gradient(to bottom, #ffffff, #f0f8ff);
+    border-radius: 20px;
+}
+
+.carousel-section h2 {
+    color: #1A2B49;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+/* Normal Carousel Container */
+.carousel-window {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    /* Above bubbles */
+    background: white;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    background-color: #fff;
+    /* Ensure white background if image doesn't fill */
+}
+
+.carousel-image.active {
+    opacity: 1;
+}
+
+/* Background Bubbles (Soap Foam) */
+.bg-bubble {
+    position: absolute;
+    border-radius: 50%;
+    /* Perfect circle */
+    z-index: 1;
+    /* Behind content */
+    pointer-events: none;
+
+    /* Soap Bubble Look */
+    background: radial-gradient(120% 120% at 75% 20%,
+            rgba(255, 255, 255, 0.9) 5%,
+            rgba(255, 255, 255, 0.1) 20%,
+            rgba(255, 255, 255, 0.01) 50%);
+    box-shadow:
+        inset 0 0 20px rgba(255, 255, 255, 0.5),
+        inset 10px 0 20px rgba(2, 119, 189, 0.2),
+        /* Subtle blue tint */
+        inset -10px 0 25px rgba(255, 255, 255, 0.7),
+        0 5px 15px rgba(0, 0, 0, 0.05);
+    /* Slight shadow */
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(1px);
+    /* Slight blur for realism */
+
+    animation: bubble-float 10s infinite ease-in-out;
+}
+
+/* Specific Bubbles variations */
+.bubble-1 {
+    width: 250px;
+    height: 250px;
+    top: -40px;
+    left: -40px;
+    animation-duration: 15s;
+    opacity: 0.6;
+}
+
+.bubble-2 {
+    width: 180px;
+    height: 180px;
+    bottom: 20px;
+    right: -20px;
+    animation-duration: 12s;
+    animation-delay: 1s;
+    opacity: 0.5;
+}
+
+.bubble-3 {
+    width: 120px;
+    height: 120px;
+    top: 30%;
+    right: 15%;
+    animation-duration: 18s;
+    animation-delay: 3s;
+    opacity: 0.7;
+}
+
+.bubble-4 {
+    width: 90px;
+    height: 90px;
+    bottom: 15%;
+    left: 10%;
+    animation-duration: 14s;
+    animation-delay: 2s;
+    opacity: 0.6;
+}
+
+/* New: Small extra bubbles for "foam" feel */
+.bubble-section {
+    perspective: 1000px;
+}
+
+@keyframes bubble-float {
+
+    0%,
+    100% {
+        transform: translateY(0) translateX(0) scale(1);
+    }
+
+    33% {
+        transform: translateY(-20px) translateX(10px) scale(1.02);
+    }
+
+    66% {
+        transform: translateY(-10px) translateX(-5px) scale(0.98);
+    }
+}
+
+/* Dots Navigation */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    padding-top: 1.5rem;
+    position: relative;
+    z-index: 10;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #cbd5e1;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.indicator.active {
+    background-color: #0277BD;
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .carousel-window {
+        height: 300px;
+    }
+
+    .bubble-1 {
+        width: 150px;
+        height: 150px;
+    }
+}

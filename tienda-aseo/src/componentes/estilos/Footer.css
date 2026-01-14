@@ -1,0 +1,101 @@
+/* ===== FOOTER GENERAL ===== */
+.footer {
+  width: 100%;
+  background-color: #0b5fa5;
+  color: #ffffff;
+  border-top: 6px solid #B6E300;
+}
+
+/* ===== CONTENEDOR INTERNO (ALINEADO CON EL SITIO) ===== */
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+/* ===== SECCIONES ===== */
+.footer-section h4 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #b6ff00;
+}
+
+.footer-section p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #e6e6e6;
+}
+
+/* ===== LOGO ===== */
+.footer-logo {
+  margin-bottom: 1rem;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* ===== LISTAS ===== */
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.footer-section ul li:hover {
+  text-decoration: underline;
+}
+
+/* ===== REDES ===== */
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.icons a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.icons a:hover {
+  text-decoration: underline;
+}
+
+/* ===== PARTE INFERIOR ===== */
+.footer-bottom {
+  width: 100%;
+  background-color: #094e8a;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .icons {
+    align-items: center;
+  }
+}
