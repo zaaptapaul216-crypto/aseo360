@@ -1,0 +1,334 @@
+/* Secciones Manejadas por Tailwind inline en JSX */
+/* .pos-container y .pos-products-section se han migrado directo al componente para control absoluto */
+
+.pos-search-bar {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.pos-search-input {
+    width: 100%;
+    padding: 0.8rem 1rem 0.8rem 2.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 50px;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s;
+}
+
+.pos-search-input:focus {
+    outline: none;
+    border-color: #094e8a;
+    box-shadow: 0 4px 8px rgba(9, 78, 138, 0.1);
+}
+
+.pos-search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+}
+
+.pos-categories {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+}
+
+.category-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: white;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.category-btn.active {
+    background-color: #094e8a;
+    color: white;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 1rem;
+    flex-grow: 1;
+    align-content: start; /* Evita que crezcan verticalmente de forma extraña */
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 2px solid transparent;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-color: #B6E300;
+}
+
+.product-image {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+.product-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #343a40;
+    line-height: 1.2;
+}
+
+.product-price {
+    font-weight: 700;
+    color: #094e8a;
+    font-size: 1.1rem;
+}
+
+.product-stock {
+    font-size: 0.75rem;
+    color: #6c757d;
+}
+
+/* Sección Derecha: Carrito y Checkout */
+.pos-cart-section {
+    width: 400px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #e9ecef;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.cart-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid #e9ecef;
+    background-color: #f8f9fa;
+}
+
+.client-selector {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.selected-client {
+    background-color: #e7f5ff;
+    border: 1px solid #094e8a;
+    color: #094e8a;
+    padding: 0.5rem;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.btn-remove-client {
+    background: none;
+    border: none;
+    color: #c92a2a;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 0.5rem;
+}
+
+.cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.cart-item-info {
+    flex: 1;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.cart-item-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #343a40;
+}
+
+.cart-item-price {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-quantity {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ced4da;
+    background: white;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.btn-quantity:hover {
+    background-color: #e9ecef;
+}
+
+.item-quantity {
+    font-weight: 600;
+    font-size: 0.9rem;
+    min-width: 20px;
+    text-align: center;
+}
+
+.btn-delete-item {
+    color: #c92a2a;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.cart-footer {
+    padding: 1.5rem;
+    border-top: 1px solid #e9ecef;
+    background-color: #f8f9fa;
+}
+
+.cart-summary {
+    margin-bottom: 1rem;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #dee2e6;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #094e8a;
+}
+
+.payment-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.receipt-options {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.option-btn {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    background: white;
+    color: #495057;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s;
+    flex: 1;
+}
+
+.option-btn.active {
+    background-color: #094e8a;
+    color: white;
+    border-color: #094e8a;
+}
+
+.btn-checkout {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background-color: #B6E300;
+    color: #094e8a;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.btn-checkout:hover {
+    background-color: #aed600;
+    transform: translateY(-2px);
+}
+
+.btn-checkout:active {
+    transform: translateY(0);
+}
+
+/* Modal simple para nuevo cliente */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content-custom {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 400px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}

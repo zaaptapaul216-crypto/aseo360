@@ -1,0 +1,56 @@
+:root {
+  /* Variables de colores (puedes modificarlas a tu gusto) */
+  --primary-blue: #0D63A5;
+  --dark-blue: #0A4F8C;
+  --accent-green: #B6E300;
+  --nav-text: #D0E6F6;
+  --text-white: #ffffff;
+  --bg-dark: #242424;
+  --sidebar-bg: #0b5fa5;
+  --sidebar-dark: #094e8a;
+  --body-bg: #f5f7fa;
+  --text-color: #333;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--body-bg);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+/* ========================================================================= */
+/* ESTRUCTURA BASE DEL SISTEMA (LAYOUT) - CREADO IGUAL A PUNTO DE VENTA      */
+/* ========================================================================= */
+
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0; 
+  margin-left: 250px; /* Ancho de la barra lateral (Sidebar) */
+  margin-top: 60px;   /* Alto de la barra superior (Navbar) */
+  transition: margin-left 0.3s ease;
+  height: calc(100vh - 60px); /* Obligamos a todo el sistema a tener medidas exactas al viewport como en PV */
+  overflow-y: auto; /* Cada página hará scroll internamente de ser necesario */
+  background-color: var(--body-bg);
+  position: relative; 
+}
+
+/* Cuando el sidebar se oculta en móviles o botones mágicos */
+.main-content.full-width {
+  margin-left: 0;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+}

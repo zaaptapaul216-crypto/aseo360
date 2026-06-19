@@ -1,0 +1,281 @@
+/* NotaVenta.css - Styles for Sales Note system */
+
+.nota-venta-container {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Paper Sheet A4 */
+.nota-venta-paper {
+    background: white;
+    width: 210mm;
+    min-height: 297mm;
+    padding: 15mm;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    color: #333;
+    font-size: 11px;
+    line-height: 1.4;
+    border-radius: 4px;
+}
+
+/* --- HEADER --- */
+.nota-venta-header-grid {
+    display: grid;
+    grid-template-columns: 120px 1fr 250px;
+    gap: 20px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.nota-venta-paper .qr-section {
+    width: 120px;
+    height: 120px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+}
+
+.nota-venta-paper .qr-placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.nota-venta-paper .header-company-info {
+    text-align: center;
+}
+
+.nota-venta-paper .company-logo-img {
+    max-height: 80px;
+    max-width: 100%;
+    margin-bottom: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nota-venta-paper .company-name-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #27ae60;
+    /* Green for Sales */
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+}
+
+.nota-venta-paper .company-details {
+    font-size: 10px;
+    color: #718096;
+}
+
+.nota-venta-paper .ruc-box {
+    border: 2px solid #27ae60;
+    text-align: center;
+    padding: 15px 10px;
+    border-radius: 8px;
+}
+
+.nota-venta-paper .ruc-number {
+    font-size: 16px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 5px;
+    color: #27ae60;
+}
+
+.nota-venta-paper .ruc-title {
+    background-color: #27ae60;
+    color: white;
+    font-weight: 700;
+    font-size: 13px;
+    display: block;
+    padding: 8px 0;
+    margin: 8px 0;
+    text-transform: uppercase;
+}
+
+.nota-venta-paper .ruc-serie {
+    font-size: 15px;
+    font-weight: 600;
+    display: block;
+    margin-top: 5px;
+    color: #27ae60;
+}
+
+/* --- CUSTOMER INFO --- */
+.nota-venta-paper .customer-info-box {
+    border: 1px solid #e2e8f0;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    background-color: #f7fafc;
+}
+
+.nota-venta-paper .info-row {
+    margin-bottom: 6px;
+}
+
+.nota-venta-paper .label-bold {
+    font-weight: 700;
+    margin-right: 8px;
+    display: inline-block;
+    min-width: 100px;
+    color: #4a5568;
+}
+
+.nota-venta-paper .value-text {
+    color: #2d3748;
+}
+
+/* --- TABLE --- */
+.nota-venta-paper .items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 11px;
+}
+
+.nota-venta-paper .items-table th {
+    background-color: #f7fafc;
+    border: 1px solid #e2e8f0;
+    padding: 10px 8px;
+    text-align: center;
+    font-weight: 700;
+    color: #4a5568;
+    text-transform: uppercase;
+    font-size: 9px;
+    letter-spacing: 0.05em;
+}
+
+.nota-venta-paper .items-table td {
+    border: 1px solid #e2e8f0;
+    padding: 10px 8px;
+    vertical-align: middle;
+    color: #2d3748;
+}
+
+.nota-venta-paper .text-center {
+    text-align: center;
+}
+
+.nota-venta-paper .text-right {
+    text-align: right;
+}
+
+/* --- TOTALS --- */
+.nota-venta-paper .totals-section {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.nota-venta-paper .totals-box {
+    width: 320px;
+}
+
+.nota-venta-paper .total-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px dashed #e2e8f0;
+}
+
+.nota-venta-paper .total-label {
+    font-weight: 600;
+    color: #4a5568;
+}
+
+.nota-venta-paper .total-value {
+    text-align: right;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.nota-venta-paper .grand-total {
+    border-top: 2px solid #27ae60;
+    border-bottom: none;
+    padding-top: 8px;
+    margin-top: 8px;
+    font-weight: 800;
+    font-size: 14px;
+    color: #27ae60;
+}
+
+.nota-venta-paper .amount-in-words {
+    margin-top: 15px;
+    font-style: italic;
+    font-size: 11px;
+    color: #718096;
+    border-top: 1px solid #edf2f7;
+    padding-top: 10px;
+}
+
+/* --- ACTION BAR --- */
+.nota-venta-container .action-bar {
+    position: fixed;
+    top: 100px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 100;
+}
+
+.nota-venta-container .btn-float {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s;
+}
+
+.nota-venta-container .btn-float:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* --- PRINT RULES --- */
+@media print {
+    body {
+        background: white !important;
+    }
+
+    .nota-venta-container {
+        padding: 0 !important;
+        background: white !important;
+        min-height: 0 !important;
+    }
+
+    .nota-venta-container .action-bar {
+        display: none !important;
+    }
+
+    .navbar,
+    .sidebar,
+    header,
+    footer {
+        display: none !important;
+    }
+
+    .nota-venta-paper {
+        margin: 0 !important;
+        padding: 10mm !important;
+        box-shadow: none !important;
+        width: 100% !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        border: none !important;
+    }
+}

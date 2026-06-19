@@ -1,0 +1,719 @@
+/* ============================
+   Cotizacion.css - Simplified Quote
+   ============================ */
+
+/* --- PAGE --- */
+.cot-page {
+    padding: 1.5rem;
+    min-height: 100vh;
+    background: #f1f5f9;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* --- CARD --- */
+.cot-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 6px 24px rgba(0,0,0,0.04);
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cot-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.75rem;
+    border-bottom: 1px solid #e2e8f0;
+    background: linear-gradient(135deg, #094e8a 0%, #0b6cb8 100%);
+}
+
+.cot-card-header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cot-header-icon {
+    font-size: 1.3rem;
+    color: rgba(255,255,255,0.8);
+}
+
+.cot-card-title {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.01em;
+}
+
+.cot-card-header-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.cot-card-body {
+    padding: 1.75rem;
+}
+
+/* --- FIELDS --- */
+.cot-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.cot-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.cot-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.cot-required {
+    color: #ef4444;
+}
+
+.cot-input {
+    padding: 10px 14px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    color: #1e293b;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    background: #fff;
+    font-family: inherit;
+}
+
+.cot-input:focus {
+    border-color: #094e8a;
+    box-shadow: 0 0 0 3px rgba(9,78,138,0.1);
+}
+
+.cot-input-readonly {
+    background: #f8fafc;
+    color: #64748b;
+    cursor: default;
+}
+
+.cot-textarea {
+    resize: vertical;
+    min-height: 50px;
+}
+
+/* --- PRODUCTS SECTION --- */
+.cot-products-section {
+    margin-top: 1.75rem;
+}
+
+.cot-products-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.cot-products-title {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #334155;
+}
+
+/* --- TABLE (Form) --- */
+.cot-table-wrap {
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.cot-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.cot-table thead {
+    background: #f8fafc;
+}
+
+.cot-table th {
+    padding: 12px 14px;
+    font-weight: 700;
+    color: #475569;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    border-bottom: 1.5px solid #e2e8f0;
+    text-align: left;
+}
+
+.cot-th-num { width: 50px; text-align: center; }
+.cot-th-desc { min-width: 200px; }
+.cot-th-pres { width: 110px; text-align: center; }
+.cot-th-cant { width: 90px; text-align: center; }
+.cot-th-price { width: 120px; text-align: right; }
+.cot-th-total { width: 120px; text-align: right; }
+.cot-th-action { width: 50px; }
+
+.cot-td-pres {
+    font-size: 0.82rem;
+    color: #64748b;
+}
+
+.cot-td-price-display {
+    text-align: right;
+    font-weight: 600;
+    color: #334155;
+    padding-right: 14px !important;
+    font-size: 0.85rem;
+}
+
+.cot-loading-badge {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #0284c7;
+    background: #e0f2fe;
+    padding: 2px 10px;
+    border-radius: 20px;
+    animation: cot-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes cot-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.cot-table td {
+    padding: 6px 10px;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: middle;
+    color: #334155;
+}
+
+.cot-td-center {
+    text-align: center;
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+.cot-td-total {
+    text-align: right;
+    font-weight: 700;
+    color: #094e8a;
+    padding-right: 14px !important;
+}
+
+.cot-table-input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1.5px solid transparent;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-family: inherit;
+    color: #1e293b;
+    transition: border-color 0.15s, background 0.15s;
+    background: transparent;
+    outline: none;
+}
+
+.cot-table-input:focus {
+    border-color: #094e8a;
+    background: #f0f9ff;
+}
+
+.cot-table-select {
+    width: 100%;
+    padding: 8px 6px;
+    border: 1.5px solid transparent;
+    border-radius: 8px;
+    font-size: 0.83rem;
+    font-family: inherit;
+    color: #1e293b;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.15s;
+}
+
+.cot-table-select:focus {
+    border-color: #094e8a;
+}
+
+.cot-input-center { text-align: center; }
+.cot-input-right { text-align: right; }
+
+.cot-empty-row {
+    text-align: center;
+    padding: 3rem 1rem !important;
+    color: #94a3b8;
+}
+
+.cot-empty-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    display: block;
+    opacity: 0.4;
+}
+
+.cot-empty-row p {
+    margin: 0;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.cot-empty-row span {
+    font-size: 0.8rem;
+}
+
+.cot-badge-mayor {
+    display: inline-block;
+    margin-left: 6px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #059669;
+    background: #d1fae5;
+    padding: 2px 8px;
+    border-radius: 20px;
+    vertical-align: middle;
+    letter-spacing: 0.03em;
+}
+
+/* --- BUTTONS --- */
+.cot-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 9px 18px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+
+.cot-btn-sm {
+    padding: 7px 14px;
+    font-size: 0.8rem;
+}
+
+.cot-btn-primary {
+    background: #094e8a;
+    color: #fff;
+}
+.cot-btn-primary:hover {
+    background: #083d6d;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(9,78,138,0.25);
+}
+
+.cot-btn-success {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: #fff;
+}
+.cot-btn-success:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16,185,129,0.3);
+}
+
+.cot-btn-outline {
+    background: #fff;
+    color: #094e8a;
+    border: 1.5px solid #094e8a;
+}
+.cot-btn-outline:hover {
+    background: #f0f9ff;
+}
+
+.cot-btn-outline-danger {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border: 1.5px solid rgba(255,255,255,0.4);
+}
+.cot-btn-outline-danger:hover {
+    background: rgba(255,255,255,0.25);
+}
+
+.cot-btn-icon {
+    background: none;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-size: 0.8rem;
+}
+
+.cot-btn-icon-danger {
+    color: #cbd5e1;
+}
+.cot-btn-icon-danger:hover {
+    color: #ef4444;
+    background: #fef2f2;
+}
+
+/* --- FOOTER --- */
+.cot-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 1.75rem;
+    padding-top: 1.5rem;
+    border-top: 1.5px solid #e2e8f0;
+}
+
+.cot-totals-card {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    min-width: 260px;
+    border: 1px solid #e2e8f0;
+}
+
+.cot-total-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 0.88rem;
+    color: #64748b;
+}
+
+.cot-total-value {
+    font-weight: 600;
+    color: #334155;
+}
+
+.cot-grand-total {
+    border-top: 2px solid #094e8a;
+    margin-top: 8px;
+    padding-top: 10px;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #094e8a;
+}
+
+.cot-grand-total-value {
+    font-weight: 800;
+    color: #094e8a;
+    font-size: 1.15rem;
+}
+
+.cot-action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* ============================
+   PREVIEW / PDF PAGE
+   ============================ */
+.cot-preview-page {
+    padding: 2rem;
+    background: #e2e8f0;
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Floating action buttons */
+.cot-preview-actions {
+    position: fixed;
+    top: 100px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 100;
+}
+
+.cot-fab {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.2s;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+
+.cot-fab:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.cot-fab-primary {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: #fff;
+}
+
+/* Company name in PDF */
+.cot-pdf-logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cot-pdf-company-name {
+    font-size: 28px;
+    font-weight: 800;
+    color: #094e8a;
+    margin-top: 6px;
+    letter-spacing: -0.02em;
+}
+
+.cot-pdf-ruc {
+    font-size: 12px;
+    font-weight: 700;
+    color: #475569;
+    margin-top: 2px;
+    letter-spacing: 0.03em;
+}
+
+.cot-pdf-address {
+    font-size: 11px;
+    color: #64748b;
+    margin-top: 2px;
+}
+
+.cot-fab-secondary {
+    background: #fff;
+    color: #334155;
+}
+
+/* ============================
+   TICKET (80mm FORMAT)
+   ============================ */
+
+.cot-pdf-paper {
+    background: #fff;
+    width: 80mm;
+    min-height: 150mm;
+    margin: 0 auto;
+    padding: 8mm 6mm;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    color: #000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.cot-ticket-header {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.cot-ticket-logo {
+    max-width: 50mm;
+    max-height: 25mm;
+    object-fit: contain;
+    margin-bottom: 5px;
+    filter: grayscale(100%); /* printers are b&w */
+}
+
+.cot-ticket-company {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.cot-ticket-ruc, .cot-ticket-address {
+    font-size: 10px;
+    margin-bottom: 2px;
+}
+
+.cot-ticket-divider {
+    border-bottom: 1px solid #000;
+    margin: 6px 0;
+}
+
+.cot-ticket-divider-dash {
+    border-bottom: 1px dashed #000;
+    margin: 8px 0;
+}
+
+.cot-ticket-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 4px 0;
+}
+
+.cot-ticket-date {
+    font-size: 10px;
+}
+
+.cot-ticket-info {
+    margin-bottom: 8px;
+}
+
+.cot-ticket-row {
+    display: flex;
+    justify-content: flex-start;
+    gap: 4px;
+    margin-bottom: 2px;
+}
+
+.cot-ticket-label {
+    font-weight: bold;
+}
+
+.cot-ticket-obs {
+    font-size: 10px;
+    font-style: italic;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.cot-ticket-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10px;
+}
+
+.cot-ticket-table th {
+    text-align: left;
+    border-bottom: 1px dashed #000;
+    padding-bottom: 4px;
+    font-weight: bold;
+}
+
+.cot-ticket-table td {
+    padding: 4px 0;
+    vertical-align: top;
+}
+
+.cot-t-cant {
+    width: 12%;
+    text-align: center;
+}
+
+.cot-t-desc {
+    width: 63%;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+}
+
+.cot-t-total {
+    width: 25%;
+    text-align: right;
+    font-weight: bold;
+}
+
+.cot-t-sub {
+    font-size: 9px;
+    color: #333;
+}
+
+.cot-ticket-totals {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 5px;
+}
+
+.cot-ticket-total-row {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin-bottom: 3px;
+    font-size: 11px;
+}
+
+.cot-ticket-grand {
+    font-weight: bold;
+    font-size: 13px;
+    border-top: 1px solid #000;
+    padding-top: 4px;
+    margin-top: 4px;
+}
+
+.cot-ticket-footer {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 10px;
+}
+
+.cot-ticket-firma {
+    font-weight: bold;
+    margin-top: 25px;
+    border-top: 1px solid #000;
+    display: inline-block;
+    padding-top: 5px;
+    width: 60%;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .cot-info-grid {
+        grid-template-columns: 1fr;
+    }
+    .cot-footer {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+    }
+    .cot-action-buttons {
+        justify-content: stretch;
+    }
+    .cot-action-buttons .cot-btn {
+        flex: 1;
+        justify-content: center;
+    }
+    .cot-pdf-paper {
+        width: 100%;
+        padding: 10mm;
+    }
+    .cot-pdf-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- PRINT --- */
+@media print {
+    body {
+        background: white !important;
+    }
+
+    .cot-preview-page {
+        padding: 0 !important;
+        background: white !important;
+    }
+
+    .cot-preview-actions {
+        display: none !important;
+    }
+
+    .navbar,
+    .sidebar,
+    header,
+    footer {
+        display: none !important;
+    }
+
+    .cot-pdf-paper {
+        margin: 0 !important;
+        padding: 10mm !important;
+        box-shadow: none !important;
+        width: 100% !important;
+        border-radius: 0 !important;
+    }
+}

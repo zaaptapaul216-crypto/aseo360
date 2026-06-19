@@ -1,0 +1,85 @@
+/* Estilos específicos para la página de Pedidos si son necesarios */
+/* Por ahora usamos clases de Bootstrap principalmente */
+
+.btn-group .btn-outline-primary {
+    border-color: #094e8a;
+    color: #094e8a;
+}
+
+.btn-group .btn-outline-primary:hover {
+    background-color: #094e8a;
+    color: white;
+}
+
+.btn-group .btn-primary {
+    background-color: #094e8a;
+    border-color: #094e8a;
+}
+
+.container-pedidos {
+    background-color: #f8f9fa;
+    min-height: calc(100vh - 60px);
+}
+
+.title-gestion {
+    font-weight: 800;
+    color: #0d63a5;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Pagination Styling */
+.pagination .page-link {
+    color: #0d63a5;
+    border-color: #dee2e6;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #0d63a5;
+    border-color: #0d63a5;
+    color: white;
+}
+
+.pagination .page-link:hover {
+    background-color: #e9ecef;
+    color: #094e8a;
+}
+
+/* Table Styling */
+#table-pedidos thead th {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 15px;
+}
+
+/* Print Styling */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    .container-fluid {
+        padding: 0 !important;
+    }
+
+    .card {
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .table {
+        width: 100% !important;
+        border-collapse: collapse !important;
+    }
+
+    .table td,
+    .table th {
+        border: 1px solid #dee2e6 !important;
+        padding: 8px !important;
+    }
+
+    body {
+        background-color: white !important;
+    }
+}

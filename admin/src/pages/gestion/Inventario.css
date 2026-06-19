@@ -1,0 +1,76 @@
+.inventario-container {
+    padding: 1.5rem;
+    background-color: #f0f2f5;
+    min-height: calc(100vh - 60px);
+}
+
+.inventario-header {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-img-thumb {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+.product-name-cell {
+    font-weight: 600;
+    color: #343a40;
+}
+
+.product-desc-cell {
+    font-size: 0.85rem;
+    color: #6c757d;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Modal Custom Styles */
+.modal-lg {
+    max-width: 800px;
+}
+
+.form-section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #094e8a;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.form-section-title:first-child {
+    margin-top: 0;
+}
+
+.stock-badge {
+    min-width: 30px;
+}
+
+.stock-low {
+    background-color: #ffe3e3;
+    color: #c92a2a;
+}
+
+.stock-medium {
+    background-color: #fff3bf;
+    color: #f08c00;
+}
+
+.stock-good {
+    background-color: #d3f9d8;
+    color: #2b8a3e;
+}
